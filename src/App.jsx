@@ -15,7 +15,9 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <div className="mx-auto my-10 h-px w-full max-w-[1320px] bg-white/10" />
         <Skills />
+        <div className="mx-auto my-10 h-px w-full max-w-[1320px] bg-white/10" />
         <Experience />
         <Projects />
         <Strengths />

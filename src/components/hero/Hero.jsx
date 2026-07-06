@@ -43,7 +43,7 @@ export default function Hero() {
 
       <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-[1080px] flex-col items-center border-b border-white/20 lg:min-h-[668px]">
         <motion.p
-          className="mt-3 text-center text-[clamp(1.65rem,3vw,2.15rem)] font-light tracking-[0.45em] text-white lg:mt-[48px]"
+          className="portfolio-figma mt-5 text-center text-[clamp(1.65rem,3vw,2.15rem)] text-white lg:mt-[48px] lg:text-[40px]"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
@@ -65,7 +65,7 @@ export default function Hero() {
         <motion.img
           src={heroImage}
           alt="Chetan Patil"
-          className="z-10 -mt-16 w-[min(78vw,620px)] object-contain sm:-mt-24 md:-mt-32 lg:absolute lg:bottom-[4px] lg:left-[50.5%] lg:w-[min(46vw,560px)] lg:-translate-x-1/2"
+          className="z-10 -mt-16 w-[min(78vw,620px)] object-contain sm:-mt-24 md:-mt-32 lg:absolute lg:bottom-1 lg:left-[52.2%] lg:w-[min(46vw,560px)] lg:-translate-x-1/2"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.2 }}
@@ -94,18 +94,18 @@ export default function Hero() {
         <a
           href="#about"
           aria-label="Scroll to about section"
-          className="z-20 mt-7 grid size-11 place-items-center rounded-full bg-white text-black transition hover:scale-105 lg:absolute lg:bottom-[70px] lg:left-[34px]"
+          className="z-20 mt-7 grid h-11 w-11 place-items-center rounded-full bg-white text-black transition hover:scale-105 lg:absolute lg:bottom-[17.5px] lg:left-[8.5px]"
         >
           <ArrowUpRight size={21} />
         </a>
 
-        <div className="z-20 mt-auto grid w-full grid-cols-1 gap-3 pb-6 text-center text-xs text-white/90 sm:grid-cols-3 lg:px-[130px] lg:pb-[24px]">
+        <div className="z-20 mt-auto grid w-full grid-cols-1 gap-3 pb-6 text-center text-xs text-white/90 sm:grid-cols-3 lg:px-32.5 lg:pb-6">
           {roles.map((role) => (
             <span key={role}>{role}</span>
           ))}
         </div>
 
-        <div className="absolute bottom-[28px] right-[28px] z-20 hidden flex-col gap-4 lg:flex">
+        <div className="absolute bottom-7 right-7 z-20 hidden flex-col gap-4 lg:flex">
           <a href="#" aria-label="Instagram" className="transition hover:text-orange-300">
             <InstagramMark />
           </a>
