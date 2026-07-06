@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000;
+  --foreground: #f8f8f8;
+  --muted: #cfcfcf;
+  --border: rgba(255, 255, 255, 0.16);
+  --accent-blue: #3158d4;
+  --accent-violet: #725b9b;
+  --accent-orange: #f47a22;
+  --accent-green: #00b530;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(244, 122, 34, 0.35);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-name {
+  font-size: clamp(3.8rem, 12vw, 10.8rem);
+  letter-spacing: clamp(0.45rem, 2.6vw, 2.6rem);
+  line-height: 0.86;
+  word-break: keep-all;
+}
+
+.section-title {
+  font-size: clamp(1.55rem, 2.1vw, 2.05rem);
+  letter-spacing: 0.08em;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-violet), var(--accent-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(135deg, var(--accent-blue), var(--accent-violet), var(--accent-orange)) border-box;
+  border: 1px solid transparent;
+}
+
+.soft-card-gradient {
+  background:
+    radial-gradient(circle at 92% 18%, rgba(244, 122, 34, 0.24), transparent 30%),
+    radial-gradient(circle at 8% 0%, rgba(49, 88, 212, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(27, 28, 42, 0.96), rgba(28, 16, 18, 0.96) 54%, rgba(67, 34, 15, 0.9));
+}
+
+.project-blue {
+  background:
+    radial-gradient(circle at 88% 30%, rgba(49, 88, 212, 0.45), transparent 38%),
+    radial-gradient(circle at 15% 10%, rgba(244, 122, 34, 0.23), transparent 34%),
+    linear-gradient(135deg, #36212b, #22254c 54%, #09235b);
+}
+
+.project-brown {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(244, 122, 34, 0.5), transparent 36%),
+    radial-gradient(circle at 86% 30%, rgba(114, 91, 155, 0.3), transparent 35%),
+    linear-gradient(135deg, #6a3817, #3a1f1d 56%, #211822);
+}
+
+.project-violet {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(49, 88, 212, 0.42), transparent 38%),
+    radial-gradient(circle at 12% 16%, rgba(244, 122, 34, 0.2), transparent 32%),
+    linear-gradient(135deg, #332436, #272148 58%, #0e2762);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
