@@ -17,7 +17,7 @@ function ProjectCard({ project }) {
         <img
           src={project.image}
           alt={`${project.title} project mockup`}
-          className="max-h-[330px] w-full object-contain"
+          className="max-h-82.5 w-full object-contain"
           loading="lazy"
         />
       </motion.div>
@@ -68,15 +68,18 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState("Software");
+  const [activeTab, setActiveTab] = useState("All");
   const visibleProjects = useMemo(
-    () => projects.filter((project) => project.category === activeTab),
+    () =>
+      activeTab === "All"
+        ? projects
+        : projects.filter((project) => project.category === activeTab),
     [activeTab],
   );
 
   return (
     <section id="projects" className="border-t border-white/15 bg-black px-6 py-24 sm:px-10 lg:py-32">
-      <div className="mx-auto max-w-[1040px]">
+      <div className="mx-auto max-w-260">
         <SectionHeading>Projects</SectionHeading>
         <div
           className="mt-12 flex justify-center gap-8 text-sm text-white/85 sm:gap-12"
