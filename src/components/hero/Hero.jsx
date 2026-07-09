@@ -44,7 +44,7 @@ export default function Hero() {
 
       <div className="relative flex min-h-[calc(100vh-6rem)] w-full flex-col items-center border-b border-white/20 lg:min-h-167">
         <motion.p
-          className="portfolio-figma mt-5 text-center text-[clamp(1.65rem,3vw,2.15rem)] text-white lg:mt-12 lg:text-[40px]"
+          className="portfolio-figma mt-8 text-center text-[clamp(1.65rem,3vw,2.15rem)] text-white lg:mt-20 lg:text-[40px]"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
@@ -53,7 +53,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="hero-name pointer-events-none mt-14 w-full text-center font-light uppercase text-white sm:mt-20 lg:absolute lg:left-1/2 lg:top-38.75 lg:z-20 lg:mt-0 lg:flex lg:flex-nowrap lg:w-full lg:max-w-none lg:-translate-x-1/2 lg:items-center lg:justify-between lg:px-0 lg:text-[clamp(4.6rem,7.4vw,6.5rem)] lg:tracking-[0.38em] lg:whitespace-nowrap"
+          className="hero-name pointer-events-none mt-24 w-full text-center font-light uppercase text-white sm:mt-28 lg:absolute lg:left-1/2 lg:top-38.75 lg:z-20 lg:mt-0 lg:flex lg:flex-nowrap lg:w-full lg:max-w-none lg:-translate-x-1/2 lg:items-center lg:justify-between lg:px-0 lg:text-[clamp(4.6rem,7.4vw,6.5rem)] lg:tracking-[0.38em] lg:whitespace-nowrap"
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -66,7 +66,7 @@ export default function Hero() {
         <motion.img
           src={heroImage}
           alt="Chetan Patil"
-          className="z-10 -mt-16 w-[min(78vw,620px)] object-contain sm:-mt-24 md:-mt-32 lg:absolute lg:bottom-1 lg:left-[52.2%] lg:w-[min(46vw,560px)] lg:-translate-x-1/2"
+          className="z-10 mt-8 w-[min(78vw,620px)] object-contain sm:mt-12 md:mt-20 lg:absolute lg:bottom-1 lg:left-[52.2%] lg:w-[min(46vw,560px)] lg:-translate-x-1/2"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.2 }}
