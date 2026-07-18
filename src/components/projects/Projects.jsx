@@ -1,10 +1,9 @@
-import { useMemo, useState } from "react";
+import { useMemo,useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { projects, projectTabs } from "../../data/projects.js";
 import SectionHeading from "../ui/SectionHeading.jsx";
-import ProjectDetail from "./ProjectDetail.jsx";
 
-function ProjectCard({ project, onView }) {
+function ProjectCard({ project }) {
   return (
     <motion.article
       className={`${project.background} grid overflow-hidden rounded-2xl border border-white/14 p-6 sm:p-8 lg:grid-cols-[1.05fr_1fr] lg:p-12`}
@@ -57,13 +56,14 @@ function ProjectCard({ project, onView }) {
         <p className="mt-5 text-sm leading-relaxed tracking-[0.03em] text-white/85">
           {project.description}
         </p>
-        <button
-          type="button"
-          onClick={() => onView(project)}
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-8 inline-flex min-h-11 w-full items-center justify-center rounded-md bg-white px-6 text-sm text-black transition hover:bg-orange-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-300"
         >
           View Project
-        </button>
+        </a>
       </div>
     </motion.article>
   );
@@ -71,7 +71,6 @@ function ProjectCard({ project, onView }) {
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("All");
-  const [selectedProject, setSelectedProject] = useState(null);
   const visibleProjects = useMemo(
     () =>
       activeTab === "All"
@@ -109,17 +108,11 @@ export default function Projects() {
         <div className="mt-14 space-y-14">
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} onView={setSelectedProject} />
+              <ProjectCard key={project.title} project={project} />
             ))}
           </AnimatePresence>
         </div>
       </div>
-
-      <AnimatePresence>
-        {selectedProject && (
-          <ProjectDetail project={selectedProject} onClose={() => setSelectedProject(null)} />
-        )}
-      </AnimatePresence>
     </section>
   );
 }
