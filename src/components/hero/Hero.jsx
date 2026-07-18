@@ -86,7 +86,7 @@ export default function Hero() {
             <GradientButton href="#contact" variant="outline" className="lg:min-w-37 lg:px-7 whitespace-nowrap">
               Contact Me
             </GradientButton>
-            <GradientButton href="./Chetan-Patil-Resume.txt" download className="lg:min-w-47.5 lg:px-6 whitespace-nowrap">
+            <GradientButton href="./Chetan-Patil-Resume.pdf" download className="lg:min-w-47.5 lg:px-6 whitespace-nowrap">
               Download Resume
             </GradientButton>
           </div>
